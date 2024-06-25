@@ -14,3 +14,5 @@ print(a+d)
 # del a
 print(f"nombre: {nombre} Apellido: {apellido} edad: {a+b}")
 print ("ariel" in nombre)
+a += 10
+print (a)
