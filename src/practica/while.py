@@ -1,7 +1,10 @@
 import os
 os.system("cls" if os.name=="nt" else "clear")
+
+archivo = "datos.txt"
 continuar = "s"
 alumnos = list()
+alumnos2 = list()
 while continuar == "s":
     print("------------------------( Alumnos de 4 A - Comisión 2024 )------------------------")
     dic = {"Nombre1": input("Ingrese el Primer Nombre:     ".capitalize()).capitalize(),
@@ -15,6 +18,23 @@ while continuar == "s":
         alumnos.append(nom1)
         alumnos.append(nom2)
         alumnos.append(apel)
+
+        alumnos2.append(nom1)
+        alumnos2.append(" ")
+        alumnos2.append(nom2)
+        alumnos2.append(" ")
+        alumnos2.append(apel)
+        alumnos2.append("\n")
+
+        if os.path.exists(archivo):
+            archivos = open("datos.txt","a", encoding="utf-8")
+            archivos.writelines(alumnos2)
+            archivos.close()
+        else:
+            with open("datos.txt","w", encoding="utf-8") as archivos:
+                archivos.writelines(alumnos2)
+                archivos.close()
+        alumnos2.clear()
         a = 0
         b = 1
         c = 2
