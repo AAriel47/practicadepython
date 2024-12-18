@@ -78,7 +78,7 @@ while (seguir==True):
         alumno.pop(int(codi)-1)
         alumno.insert((int(codi)-1),nuevo)
         grabar = input("desea grabar el registro s/n: \n".upper())
-        if ((grabar.lower()=="s")| (grabar.lower()=="si")):
+        if ((grabar.lower()=="s") | (grabar.lower()=="si")):
             if (os.path.exists(archi)):
                 archi1 = open(archi,"w",encoding="utf-8")
                 archi1.writelines(alumno)

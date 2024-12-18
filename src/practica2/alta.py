@@ -1,0 +1,2 @@
+print("bienvenido".capitalize())
+input()
